@@ -1,0 +1,5 @@
+/MDK-ARM/*.scvd
+/MDK-ARM/*.kunic
+/MDK-ARM/*.lst
+/MDK-ARM/DebugConfig
+/MDK-ARM/G070Bootloader
