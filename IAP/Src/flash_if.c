@@ -90,7 +90,7 @@ uint32_t FLASH_If_Erase(uint32_t start)
   NbrOfPages = (USER_FLASH_END_ADDRESS - start)/FLASH_PAGE_SIZE;
 
   pEraseInit.TypeErase = FLASH_TYPEERASE_PAGES;
-  pEraseInit.Page = start;
+  pEraseInit.Page = (start - 0x80000000)/FLASH_PAGE_SIZE;
   pEraseInit.NbPages = NbrOfPages;
   pEraseInit.Banks = FLASH_BANK_1;
   status = HAL_FLASHEx_Erase(&pEraseInit, &PageError);
